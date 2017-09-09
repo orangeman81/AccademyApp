@@ -1,0 +1,20 @@
+<div class="row flex">
+    <div class="card-flex" *ngFor="let news of newsList">
+        <article class="card h-entry">
+            <div class="card-image">
+                <div class="img-wrapper"><img [src]="'/uploads/' + news.fileName"></div>
+                <span class="card-title p-name">{{news.title}}</span>
+                <a routerLink="/home/news/{{news._id}}" class="btn-floating halfway-fab waves-effect waves-light red accent-4"><i class="material-icons">details</i></a>
+            </div>
+            <div class="card-content">
+                <p class="e-content">{{news.description | truncate : 150}}</p>
+            </div>
+            <footer>
+                <span>
+                    <time><i class="material-icons">access_time</i>&ensp;<span class="dt-published">{{news.createdAt | date:'shortDate'}}</span></time>
+                <p class="p-category">{{news.tag}}</p>
+                </span>
+            </footer>
+        </article>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.btn-dash {
+    @extend .btn-large;
+}
+
+.btn-floating.btn-dash {
+    transform: translateY(.5rem);
+    @media screen and (max-width: $small-screen-up) {
+        transform: none;
+        width: 40px;
+        height: 40px;
+        i {
+            line-height: 40px;
+        }
+    }
+}

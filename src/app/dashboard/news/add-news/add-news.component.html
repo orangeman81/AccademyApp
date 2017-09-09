@@ -1,0 +1,6 @@
+<section>
+    <h1 class="left">Add news</h1>
+    <button routerLink="../" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">list</i></button>
+    <div class="clearfix"></div>
+    <app-add-news-form [fileVal]="upload.fileVal" (file)="upload.getFile($event)" (addNewsForm)="onSubmit($event)"></app-add-news-form>
+</section>

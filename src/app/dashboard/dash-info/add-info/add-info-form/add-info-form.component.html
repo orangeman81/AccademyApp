@@ -1,0 +1,82 @@
+<div class="row">
+    <form class="col s12" materialize #infoForm="ngForm" (ngSubmit)="addInfoForm.emit(infoForm.value); infoForm.reset()">
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input id="title" type="text" name="title" class="validate" ngModel required>
+                <label for="title">Titolo informazione</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="infoUrl" type="text" name="infoUrl" class="validate" ngModel required>
+                <label for="infoUrl">Url informazione</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="sectionTitle" type="text" name="sectionTitle" class="validate" ngModel required>
+                <label for="sectionTitle">Titolo sezione</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="sectionContent" name="sectionContent" class="materialize-textarea" ngModel required></textarea>
+                <label for="sectionContent">Contenuto sezione</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="listTitle" type="text" name="listTitle" class="validate" ngModel>
+                <label for="listTitle">Titolo lista</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="listContent" type="text" name="listContent" class="validate" ngModel>
+                <label for="listContent">Contenuto lista</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="listTitleII" type="text" name="listTitleII" class="validate" ngModel>
+                <label for="listTitleII">Titolo lista II</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="listContentII" type="text" name="listContentII" class="validate" ngModel>
+                <label for="listContentII">Contenuto lista II</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="listTitleIII" type="text" name="listTitleIII" class="validate" ngModel>
+                <label for="listTitleIII">Titolo lista III</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="listContentIII" type="text" name="listContentIII" class="validate" ngModel>
+                <label for="listContentIII">Contenuto lista III</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="sectionTitleII" type="text" name="sectionTitleII" class="validate" ngModel>
+                <label for="sectionTitleII">Titolo sezione II</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="sectionContentII" name="sectionContentII" class="materialize-textarea" ngModel></textarea>
+                <label for="sectionContentII">Contenuto sezione II</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="sectionTitleIII" type="text" name="sectionTitleIII" class="validate" ngModel>
+                <label for="sectionTitleIII">Titolo sezione III</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="sectionContentIII" name="sectionContentIII" class="materialize-textarea" ngModel></textarea>
+                <label for="sectionContentIII">Contenuto sezione III</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="infoEmail" type="email" name="infoEmail" class="validate" ngModel>
+                <label for="infoEmail">Email di riferimento</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="infoPhone" type="text" name="infoPhone" class="validate" ngModel>
+                <label for="infoPhone">Numero di riferimento</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="file-field input-field col s12">
+                <div class="btn">
+                    <span><i class="material-icons">picture_as_pdf</i></span>
+                    <input type="file" (change)="doc.emit($event)" accept=".pdf">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit" [disabled]="!infoForm.form.valid">Crea</button>
+    </form>
+</div>

@@ -1,0 +1,184 @@
+// details page
+main#details {
+    margin-top: -160px;
+    @extend .container;
+    @media screen and (max-width: $small-screen) {
+        margin-top: -80px;
+    }
+    .card {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0.8) 160%);
+        header {
+            text-align: center;
+            margin-bottom: 5.333rem;
+            h1 {
+                color: $secondary-color;
+                margin-bottom: 1rem;
+                @media screen and (max-width: $small-screen) {
+                    font-size: $h3-fontsize;
+                }
+            }
+            time {
+                i {
+                    transform: translateY(.2rem);
+                }
+            }
+        }
+        p::first-letter {
+            float: left;
+            font-size: 6.333rem;
+            line-height: .8333;
+            padding-right: 1rem;
+            color: #D50000;
+            margin-left: -.5rem;
+            @media screen and (max-width: 376px) {
+                font-size: 6.6rem;
+            }
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        @media screen and (min-width: 1280px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+            header {
+                margin-bottom: 6.4rem;
+                h1 {
+                    font-size: 6.2rem;
+                }
+            }
+            .card-action {
+                border: 0;
+                padding: 3rem 0 2rem;
+            }
+        }
+        @media screen and (max-width: $small-screen) {
+            box-shadow: none;
+            header {
+                margin-bottom: 3.333rem;
+                h1 {
+                    margin-top: 1.8rem;
+                }
+                time {
+                    font-size: 1.2rem;
+                }
+            }
+            .card-content {
+                padding: 12px;
+            }
+        }
+    }
+    section {
+        figure {
+            margin-bottom: .5rem;
+            figcaption {
+                background: $off-black;
+                padding: .75rem 1rem;
+                &,
+                a {
+                    color: $primary-color;
+                }
+                i {
+                    transform: translateY(-.15rem);
+                }
+            }
+        }
+    }
+}
+
+main#inner {
+    margin-top: 1rem;
+}
+
+// // portfolio
+// #portfolio {
+//     main {
+//         padding: .5rem;
+//     }
+//     background: $off-black;
+// }
+// main#portfolio-details {
+//     margin-top: 1.5rem;
+//     figure {
+//         figcaption {
+//             background: $off-black;
+//             padding: .5rem 1rem .75rem;
+//             margin-bottom: 1.5rem;
+//             i {
+//                 @extend .icon-fix;
+//             }
+//             a {
+//                 @extend .right;
+//                 margin-right: .5rem;
+//             }
+//             a,
+//             time {
+//                 color: $primary-color;
+//             }
+//             time {
+//                 font-weight: 900;
+//             }
+//         }
+//     }
+//     article {
+//         margin-bottom: 1.5rem;
+//         header {
+//             h1 {
+//                 margin: 0;
+//             }
+//             .tags li {
+//                 display: inline-block;
+//                 font-weight: 700;
+//                 &::before {
+//                     content: "#";
+//                     color: $link-color;
+//                 }
+//                 &::after {
+//                     content: ", ";
+//                 }
+//                 &:last-child {
+//                     &::after {
+//                         content: ".";
+//                     }
+//                 }
+//             }
+//         }
+//         p {
+//             font-size: 1.2rem;
+//             line-height: 1.6;
+//         }
+//         footer {
+//             &::before {
+//                 content: "";
+//                 display: block;
+//                 width: 16.8%;
+//                 border-style: inset;
+//                 border-width: 1px;
+//             }
+//             p {
+//                 font-style: italic;
+//             }
+//         }
+//     }
+//     aside {
+//         display: flex;
+//         flex-direction: column;
+//         h4 {
+//             margin-top: 0;
+//             margin-bottom: 1rem;
+//         }
+//         figure {
+//             overflow: hidden;
+//             margin-bottom: .5rem;
+//         }
+//         img {
+//             transition: .3s ease-out;
+//             transform-origin: center;
+//             display: block;
+//             @extend .responsive-img;
+//         }
+//         img:hover {
+//             transform: scale(1.2) rotate(-3deg);
+//         }
+//     }
+// }

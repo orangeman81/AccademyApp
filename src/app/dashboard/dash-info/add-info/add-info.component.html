@@ -1,0 +1,7 @@
+<section>
+    <h1 class="left">Add Info</h1>
+    <button routerLink="../" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">list</i></button>
+    <div class="clearfix"></div>
+    <app-add-info-form (doc)="upload.getDoc($event)" (addInfoForm)="onSubmit($event)">
+    </app-add-info-form>
+</section>

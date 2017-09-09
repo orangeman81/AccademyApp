@@ -1,0 +1,7 @@
+img {
+    max-width: 200px;
+    padding: 12rem 0 2rem;
+    @media screen and (max-width: 600px) {
+        padding: 6rem 0 2rem;
+    }
+}

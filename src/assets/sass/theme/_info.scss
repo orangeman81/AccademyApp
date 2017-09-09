@@ -1,0 +1,80 @@
+//info-page
+#info-page {
+    section {
+        padding-top: 3.7333rem;
+        @extend .container;
+        h1 {
+            margin-left: -.3rem;
+            line-height: 100%;
+            @media screen and (max-width: $small-screen) {
+                font-size: $h3-fontsize;
+            }
+        }
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+        h2 {
+            font-size: $h4-fontsize;
+            margin-left: -.16rem;
+        }
+        h3 {
+            font-size: $h5-fontsize;
+            color: $secondary-color;
+            margin: 2rem 0 .5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-top: 0;
+        }
+        ul:not(.select-dropdown) {
+            padding-left: 2.6rem;
+            border-left: solid .75rem darken($primary-color, 10%);
+            li {
+                font-size: 1.15rem;
+                line-height: 1.6;
+            }
+        }
+        ul.collapsible {
+            box-shadow: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+        }
+        .collapsible-header,
+        .collapsible-body {
+            border: none;
+        }
+        .collapsible-header {
+            min-height: auto;
+            p {
+                font-weight: 700;
+                color: $secondary-color;
+                margin: .75em 0;
+            }
+        }
+        .collapsible-body {
+            padding: 0 2rem;
+            a {
+                @extend .link-hover;
+            }
+            ul {
+                padding-left: 0;
+                border: none;
+                margin: 0;
+                a {
+                    color: $off-black;
+                    line-height: 1.8;
+                    transition: all .3s ease-out;
+                    &:hover {
+                        color: $link-color;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: $small-screen) {
+            padding-top: 4.285rem;
+        }
+    }
+}

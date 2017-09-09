@@ -1,0 +1,124 @@
+.sidenav-layout {
+    nav,
+    main,
+    footer {
+        padding-left: 300px;
+        @media only screen and (max-width: 992px) {
+            padding-left: 0;
+        }
+    }
+}
+
+nav {
+    &.top-nav {
+        .nav-wrapper {
+            @media only screen and (max-width: 992px) {
+                text-align: center;
+            }
+        }
+        a {
+            text-align: left;
+        }
+        a.button-collapse {
+            position: absolute;
+            left: 0;
+        }
+        .page-title {
+            font-size: $h5-fontsize;
+            padding: 1rem 5.333rem;
+        }
+        .side-nav .collapsible-header {
+            @media only screen and (min-width: 992px) {
+                padding: 0 32px;
+            }
+        }
+    }
+    .side-nav .collapsible-body {
+        padding: 0;
+        li a {
+            padding-left: 36px;
+        }
+    }
+    li.search {
+        position: relative;
+        margin-top: 1px;
+        padding: 1px 0 0 0;
+        z-index: 2;
+        .search-wrapper {
+            margin: 0 12px;
+            transition: margin .25s ease;
+            overflow: hidden;
+            &.focused {
+                margin: 0;
+            }
+            input#search {
+                display: block;
+                font-size: 16px;
+                font-weight: 300;
+                width: 100%;
+                height: 45px;
+                margin: 0;
+                padding: 0 45px 0 15px;
+                border: 0;
+            }
+            i.material-icons {
+                position: absolute;
+                top: -8px;
+                right: 10px;
+                cursor: pointer;
+            }
+            .search-results {
+                margin: 0;
+                border-top: 1px solid #e9e9e9;
+                background-color: #fff;
+            }
+        }
+    }
+    .brand-logo {
+        font-weight: 300;
+        text-transform: uppercase;
+        img {
+            width: 40px;
+            display: inline-block;
+            transform: translateY(.8rem);
+        }
+        @media screen and (max-width: $small-screen) {
+            font-size: 1.2rem;
+            img {
+                width: 30px;
+                transform: translateY(.6rem);
+            }
+        }
+        @media screen and (max-width: 376px) {
+            font-size: 1rem;
+            line-height: 4.5rem;
+        }
+        @media screen and (max-width: 1160px) and (min-width: $medium-screen) {
+            font-size: 1rem;
+            transform: translateY(-.2rem);
+            img {
+                transform: translateY(1rem);
+            }
+        }
+    }
+    @media screen and (max-width: 1160px) and (min-width: $medium-screen) {
+        ul a {
+            padding: 0 12px;
+        }
+    }
+    .side-nav {
+        @media screen and (max-width: 321px) {
+            width: 250px;
+        }
+    }
+}
+
+#sidenav-overlay {
+    z-index: 900;
+}
+
+.pagination {
+    li.active a {
+        @extend .grey-text;
+    }
+}

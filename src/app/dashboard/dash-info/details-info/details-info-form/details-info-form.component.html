@@ -1,0 +1,82 @@
+<div class="row">
+    <form class="col s12" materialize #infoUpdateForm="ngForm" (ngSubmit)="detailsInfoForm.emit(infoUpdateForm.value); infoUpdateForm.reset()">
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input placeholder id="title" type="text" name="title" class="validate" ngModel="{{infoDetails?.title}}" required>
+                <label for="title">Titolo informazione</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="infoUrl" type="text" name="infoUrl" class="validate" ngModel="{{infoDetails?.infoUrl}}" required>
+                <label for="infoUrl">Url informazione</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder id="sectionTitle" type="text" name="sectionTitle" class="validate" ngModel="{{infoDetails?.sectionTitle}}" required>
+                <label for="sectionTitle">Titolo sezione</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="sectionContent" name="sectionContent" class="materialize-textarea" ngModel="{{infoDetails?.sectionContent}}" required></textarea>
+                <label for="sectionContent">Contenuto sezione</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="listTitle" type="text" name="listTitle" class="validate" ngModel="{{infoDetails?.listTitle}}">
+                <label for="listTitle">Titolo lista</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="listContent" type="text" name="listContent" class="validate" ngModel="{{infoDetails?.listContent}}">
+                <label for="listContent">Contenuto lista</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="listTitleII" type="text" name="listTitleII" class="validate" ngModel="{{infoDetails?.listTitleII}}">
+                <label for="listTitleII">Titolo lista II</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="listContentII" type="text" name="listContentII" class="validate" ngModel="{{infoDetails?.listContentII}}">
+                <label for="listContentII">Contenuto lista II</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="listTitleIII" type="text" name="listTitleIII" class="validate" ngModel="{{infoDetails?.listTitleIII}}">
+                <label for="listTitleIII">Titolo lista III</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="listContentIII" type="text" name="listContentIII" class="validate" ngModel="{{infoDetails?.listContentIII}}">
+                <label for="listContentIII">Contenuto lista III</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder id="sectionTitleII" type="text" name="sectionTitleII" class="validate" ngModel="{{infoDetails?.sectionTitleII}}">
+                <label for="sectionTitleII">Titolo sezione II</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="sectionContentII" name="sectionContentII" class="materialize-textarea" ngModel="{{infoDetails?.sectionContentII}}"></textarea>
+                <label for="sectionContentII">Contenuto sezione II</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder id="sectionTitleIII" type="text" name="sectionTitleIII" class="validate" ngModel="{{infoDetails?.sectionTitleIII}}">
+                <label for="sectionTitleIII">Titolo sezione III</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="sectionContentIII" name="sectionContentIII" class="materialize-textarea" ngModel="{{infoDetails?.sectionContentIII}}"></textarea>
+                <label for="sectionContentIII">Contenuto sezione III</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="infoEmail" type="email" name="infoEmail" class="validate" ngModel="{{infoDetails?.infoEmail}}">
+                <label for="infoEmail">Email di riferimento</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="infoPhone" type="text" name="infoPhone" class="validate" ngModel="{{infoDetails?.infoPhone}}">
+                <label for="infoPhone">Numero di riferimento</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="file-field input-field col s12">
+                <div class="btn">
+                    <span><i class="material-icons">picture_as_pdf</i></span>
+                    <input type="file" (change)="doc.emit($event)" accept=".pdf">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit" [disabled]="!infoUpdateForm.form.valid">Aggiorna</button>
+    </form>
+</div>

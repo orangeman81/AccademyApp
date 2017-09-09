@@ -1,0 +1,29 @@
+<main class="container">
+    <div class="row">
+        <img src="assets/img/iuad.jpg" class="responsive-img center-block" alt="IUAD logo">
+        <form class="col s12 m6 push-m3" #loginForm="ngForm" (ngSubmit)="login(loginForm.value); loginForm.reset()">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" name="email" type="email" class="validate" ngModel>
+                    <label for="email" data-error="wrong" data-success="right">Email</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="password" name="password" type="password" class="validate" ngModel>
+                    <label for="password" data-error="wrong" data-success="right">Password</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="checkbox" id="admin" name="admin" ngModel/>
+                    <label for="admin">Admin</label>
+                </div>
+                <div class="input-field col s12">
+                    <button class="waves-effect waves-light btn right" type="submit" [disabled]="!loginForm.form.valid">Login</button>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="col s12">
+                    <li *ngFor="let m of messages">{{m}}</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</main>

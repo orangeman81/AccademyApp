@@ -1,0 +1,5 @@
+<app-news-details-view [news]="news$"></app-news-details-view>
+<aside class="container">
+    <h2 class="center-align">News correlate</h2>
+    <app-news-list [newsList]="related$ | async"></app-news-list>
+</aside>

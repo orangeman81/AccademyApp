@@ -1,0 +1,14 @@
+<header class="parallax-container">
+    <div class="container">
+        <h1>News</h1>
+        <p>Cerca le ultime novità</p>
+        <app-search (query)="search($event)"></app-search>
+    </div>
+    <div class="parallax" materialize="parallax">
+        <img [src]="'../assets/img/news.jpg'">
+    </div>
+</header>
+<main class="container" id="inner">
+    <app-news-list [newsList]="query$"></app-news-list>
+    <app-pagination [lenght]="lenght" (limitCount)="loadContent($event)"></app-pagination>
+</main>

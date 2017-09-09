@@ -1,0 +1,35 @@
+<div class="row">
+    <form class="col s12" materialize #newsForm="ngForm" (ngSubmit)="addNewsForm.emit(newsForm.value); newsForm.reset()">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" type="text" name="title" class="validate" ngModel required>
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="description" name="description" class="materialize-textarea" ngModel required></textarea>
+                <label for="description">Descrizione</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <select materialize="material_select" name="tag" ngModel required>
+                      <option value="" disabled selected>Scegli una categoria</option>
+                      <option value="novità">Novità</option>
+                      <option value="evento">Evento</option>
+                      <option value="avviso">Comunicazione</option>
+                    </select>
+                <label>Categoria</label>
+            </div>
+        </div>
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>File</span>
+                <input type="file" (change)="file.emit($event)" accept=".jpg, .jpeg" required>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit" [disabled]="!newsForm.form.valid || !fileVal">Crea</button>
+    </form>
+</div>

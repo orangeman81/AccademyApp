@@ -1,0 +1,7 @@
+<section>
+    <h1 class="left">Corsi</h1>
+    <button routerLink="add" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">add</i></button>
+    <div class="clearfix"></div>
+    <app-search (query)="search($event)"></app-search>
+    <app-list-courses-view [coursesList]="query$"></app-list-courses-view>
+</section>

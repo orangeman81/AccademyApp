@@ -1,0 +1,7 @@
+<section>
+    <h1 class="left">Informazioni</h1>
+    <button routerLink="add" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">add</i></button>
+    <div class="clearfix"></div>
+    <app-search (query)="search($event)"></app-search>
+    <app-list-info-view [infoList]="query$"></app-list-info-view>
+</section>

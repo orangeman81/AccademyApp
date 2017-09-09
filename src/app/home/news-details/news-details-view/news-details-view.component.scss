@@ -1,0 +1,9 @@
+.parallax-container {
+    height: 240px;
+}
+
+@media (min-width: 601px) {
+    .parallax-container {
+        height: 420px;
+    }
+}

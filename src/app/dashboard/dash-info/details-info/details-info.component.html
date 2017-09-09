@@ -1,0 +1,12 @@
+<section>
+    <h1 class="left">Dettagli</h1>
+    <button (click)="delete(infoDetails$?.docName)" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">delete</i></button>
+    <button routerLink="../../" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">list</i></button>
+    <button (click)="layout()" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">{{iconToggle}}</i></button>
+    <div class="clearfix"></div>
+</section>
+<app-details-info-view *ngIf="!formLayout" [infoDetails]="infoDetails$"></app-details-info-view>
+<section *ngIf="formLayout">
+    <app-details-info-form [infoDetails]="infoDetails$" (detailsInfoForm)="onSubmit($event, infoDetails$?.docName)" (doc)="upload.getDoc($event)">
+    </app-details-info-form>
+</section>

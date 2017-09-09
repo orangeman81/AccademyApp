@@ -1,0 +1,13 @@
+<header class="parallax-container">
+    <div class="container">
+        <h1>Corsi</h1>
+        <p>Cerca il corso che fa per te</p>
+        <app-search (query)="search($event)"></app-search>
+    </div>
+    <div class="parallax" materialize="parallax">
+        <img [src]="'../assets/img/courses.jpg'">
+    </div>
+</header>
+<main class="container" id="inner">
+    <app-course-list [courseList]="query$"></app-course-list>
+</main>

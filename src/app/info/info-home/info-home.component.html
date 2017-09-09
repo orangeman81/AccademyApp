@@ -1,0 +1,120 @@
+<app-info-nav [info]="infoTitle"></app-info-nav>
+<main id="info-page">
+    <header class="parallax-container">
+        <div class="container">
+            <h1>Informazioni</h1>
+            <p>Cerca le informazioni che ti servono</p>
+            <app-search (query)="search($event)"></app-search>
+        </div>
+        <div class="parallax" materialize="parallax">
+            <img [src]="'../assets/img/background_iuad.jpg'">
+        </div>
+    </header>
+    <section>
+        <h2>Elenco informazioni</h2>
+        <app-info-home-view [infoList]="query$"></app-info-home-view>
+    </section>
+    <section>
+        <h2>Contatti</h2>
+        <ul class="collapsible" materialize="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <p>Sede centrale di Napoli</p>
+                </div>
+                <div class="collapsible-body">
+                    <address>
+                        Via G. Pica 62<br>
+                        (nei pressi della Stazione Centrale)<br>
+                        80142 - Napoli - Italia<br>
+                        Tel - Fax (+39) 081 5540383
+                    </address>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <p>Sede distaccata di Napoli</p>
+                </div>
+                <div class="collapsible-body">
+                    <address>
+                        Corso Arnaldo Lucci n° 156<br>
+                        (Stazione Centrale)<br>
+                        80142 - Napoli - Italia
+                    </address>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <p>Sede di Milano</p>
+                </div>
+                <div class="collapsible-body">
+                    <address>
+                        Accademia della Moda Milano<br>
+                        Via Settevalli, 320<br>
+                        06129 Perugia (PG)<br>
+                        Tel. (+39) 075 5054757<br>
+                        Cell. 347 1720920<br>
+                        milano@accademiamoda.it
+                    </address>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <p>Filiale di Perugia</p>
+                </div>
+                <div class="collapsible-body">
+                    <address>
+                        Accademia della Moda Perugia<br>
+                        Via Settevalli, 320<br>
+                        06129 Perugia (PG)<br>
+                        Tel. (+39) 075 5054757<br>
+                        Cell. 347 1720920<br>
+                        perugia@accademiamoda.it
+                    </address>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <p>Per informazioni di carattere generale</p>
+                </div>
+                <div class="collapsible-body">
+                    <p><i class="material-icons">mail</i>&ensp;info@accademiadellamoda.it</p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <p>Collaborazioni con aziende in genere e richieste di personale specializzato</p>
+                </div>
+                <div class="collapsible-body">
+                    <p><i class="material-icons">mail</i>&ensp;placement@accademiamoda.it</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Documentazione</h2>
+        <p>In questa sezione è possibile reperire tutti i Regolamenti che gestistono la vita didattica e organizzativa dell'Accademia della Moda, la modulistica e la documentazione</p>
+        <ul class="collapsible" materialize="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <p>Regolamenti</p>
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <ul>
+                            <li><a target="_blank" href="./assets/docs/manifestostudi2014-15.pdf">Manifesto degli studi anno 2014.15</a></li>
+                            <li><a target="_blank" href="./assets/docs/Regolamento_Biblioteca.pdf">Regolamento Biblioteca</a></li>
+                            <li><a target="_blank" href="./assets/docs/Regolamento_dei_Laboratori_di_Confezione.pdf">Regolamento dei Laboratori di Confezione</a></li>
+                            <li><a target="_blank" href="./assets/docs/Regolamento_dei_Laboratori_multimediali.pdf">Regolamento dei Laboratori multimediali</a></li>
+                            <li><a target="_blank" href="./assets/docs/Regolamento_Didattico.pdf">Regolamento Didattico Design della Moda</a></li>
+                            <li><a target="_blank" href="./assets/docs/Regolamento_Docenti_e_Studenti.pdf">Regolamento Docenti e Studenti</a></li>
+                            <li><a target="_blank" href="./assets/docs/Statuto_di_autonomia.pdf">Statuto di autonomia</a></li>
+                            <li><a target="_blank" href="./assets/docs/Regolamento_Didattico_Graphic_Design_e_Comunicazione_Visiva.pdf">Regolamento Didattico Graphic Design e Comunicazione Visiva</a></li>
+                            <li><a target="_blank" href="./assets/docs/Regolamento_Didattico_Design_e_Architettura_degli_Interni.pdf">Regolamento Didattico Design e Architettura degli Interni</a></li>
+                            <li><a target="_blank" href="./assets/docs/mobilitainternazionale.pdfbackground_iuad.jpg">Regolamento mobilità internazionale</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </section>
+</main>

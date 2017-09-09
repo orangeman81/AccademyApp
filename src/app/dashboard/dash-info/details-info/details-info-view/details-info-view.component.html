@@ -1,0 +1,25 @@
+<section>
+    <h2>{{infoDetails?.title}}<br><small>{{infoDetails?.sectionTitle}}</small></h2>
+    <p>{{infoDetails?.sectionContent}}</p>
+    <ul *ngIf="infoDetails?.listTitle">
+        <li><strong>{{infoDetails?.listTitle}}</strong>&ensp;{{infoDetails?.listContent}}</li>
+        <li *ngIf="infoDetails?.listTitleII"><strong>{{infoDetails?.listTitleII}}</strong>&ensp;{{infoDetails?.listContentII}}</li>
+        <li *ngIf="infoDetails?.listTitleIII"><strong>{{infoDetails?.listTitleIII}}</strong>&ensp;{{infoDetails?.listContentIII}}</li>
+    </ul>
+</section>
+<section *ngIf="infoDetails?.sectionTitleII">
+    <h2>{{infoDetails?.sectionTitleII}}</h2>
+    <p>{{infoDetails?.sectionContentII}}</p>
+</section>
+<section *ngIf="infoDetails?.sectionTitleIII">
+    <h2>{{infoDetails?.sectionTitleIII}}</h2>
+    <p>{{infoDetails?.sectionContentIII}}</p>
+</section>
+<section *ngIf="infoDetails?.infoPhone || infoDetails?.infoEmail || infoDetails?.docName">
+    <h2>Contatti e documentazione</h2>
+    <ul>
+        <li *ngIf="infoDetails?.infoPhone"><i class="material-icons">phone</i>&ensp;{{infoDetails?.infoPhone}}</li>
+        <li *ngIf="infoDetails?.infoEmail"><i class="material-icons">mail</i>&ensp;{{infoDetails?.infoEmail}}</li>
+        <li *ngIf="infoDetails?.docName"><a href="/uploads/{{infoDetails?.docName}}" target="_blank"><i class="material-icons">picture_as_pdf</i>&ensp;Scarica l'opuscolo</a></li>
+    </ul>
+</section>

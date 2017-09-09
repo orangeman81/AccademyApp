@@ -1,0 +1,7 @@
+<section>
+    <h1 class="left">Add Course</h1>
+    <button routerLink="../" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">list</i></button>
+    <div class="clearfix"></div>
+    <app-add-course-form [fileVal]="upload.fileVal" (file)="upload.getFile($event)" (doc)="upload.getDoc($event)" (addCourseForm)="onSubmit($event)">
+    </app-add-course-form>
+</section>

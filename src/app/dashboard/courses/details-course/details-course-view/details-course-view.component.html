@@ -1,0 +1,37 @@
+<section>
+    <h2>{{courseDetails?.title}} <br><small>{{courseDetails?.description}}</small></h2>
+    <ul>
+        <li><strong>Requisiti di accesso:</strong>&ensp;{{courseDetails?.requirements}}</li>
+        <li><strong>Accesso al corso:</strong>&ensp;{{courseDetails?.access}}</li>
+        <li><strong>Titolo rilasciato:</strong>&ensp;{{courseDetails?.certificate}}</li>
+    </ul>
+</section>
+<section>
+    <h2>Obiettivi</h2>
+    <p>{{courseDetails?.goals}}</p>
+</section>
+<section>
+    <h2>Sbocchi Occupazionali</h2>
+    <p>{{courseDetails?.job}}</p>
+</section>
+<section>
+    <h2>Attività formative</h2>
+    <h3>I anno</h3>
+    <p>{{courseDetails?.program}}</p>
+    <div *ngIf="courseDetails?.programII">
+        <h3>II anno</h3>
+        <p>{{courseDetails?.programII}}</p>
+    </div>
+    <div *ngIf="courseDetails?.programIII">
+        <h3>III anno</h3>
+        <p>{{courseDetails?.programIII}}</p>
+    </div>
+    <h3>Prova Finale</h3>
+</section>
+<section>
+    <ul>
+        <li><i class="material-icons">phone</i>&ensp;0815540383</li>
+        <li><i class="material-icons">mail</i>&ensp;info@accademiamoda.it</li>
+        <li *ngIf="courseDetails?.docName"><a href="/uploads/{{courseDetails?.docName}}" target="_blank"><i class="material-icons">picture_as_pdf</i>&ensp;Scarica l'opuscolo</a></li>
+    </ul>
+</section>

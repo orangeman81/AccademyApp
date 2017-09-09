@@ -1,0 +1,8 @@
+<section>
+    <h1 class="left">News</h1>
+    <button routerLink="add" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">add</i></button>
+    <div class="clearfix"></div>
+    <app-search (query)="search($event)"></app-search>
+    <app-list-news-view [newsList]="query$"></app-list-news-view>
+    <app-pagination [lenght]="lenght" (limitCount)="loadContent($event)"></app-pagination>
+</section>

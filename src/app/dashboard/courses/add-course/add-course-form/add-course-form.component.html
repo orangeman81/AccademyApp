@@ -1,0 +1,88 @@
+<div class="row">
+    <form class="col s12" materialize #courseForm="ngForm" (ngSubmit)="addCourseForm.emit(courseForm.value); courseForm.reset()">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" type="text" name="title" class="validate" ngModel required>
+                <label for="title">Nome Corso</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="description" type="text" name="description" class="validate" ngModel required>
+                <label for="description">Descrizione</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="requirements" type="text" name="requirements" class="validate" ngModel required>
+                <label for="requirements">Requisiti</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="access" type="text" name="access" class="validate" ngModel required>
+                <label for="access">Accesso</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="certificate" type="text" name="certificate" class="validate" ngModel required>
+                <label for="certificate">Titolo rilasciato</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="goals" name="goals" class="materialize-textarea" ngModel required></textarea>
+                <label for="goals">Obiettivi</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="job" name="job" class="materialize-textarea" ngModel required></textarea>
+                <label for="job">Sbocchi Occupazionali</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="program" name="program" class="materialize-textarea" ngModel required></textarea>
+                <label for="program">Attività formative I anno</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="programII" name="programII" class="materialize-textarea" ngModel></textarea>
+                <label for="programII">Attività formative II anno</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="programIII" name="programIII" class="materialize-textarea" ngModel></textarea>
+                <label for="programIII">Attività formative III anno</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <select materialize="material_select" name="tag" ngModel required>
+                    <option value="" disabled selected>Scegli un'area</option>
+                    <option value="fashion">Moda</option>
+                    <option value="graphic">Graphic Design</option>
+                    <option value="interior">Interior Design</option>
+                </select>
+                <label>Area di studi</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <select materialize="material_select" name="type" ngModel required>
+                    <option value="" disabled selected>Scegli una tipologia</option>
+                    <option value="graduation">Laurea</option>
+                    <option value="master">Master</option>
+                    <option value="professional">Professionale</option>
+                    <option value="milan">Milano</option>
+                </select>
+                <label>Tipologia</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="file-field input-field col s12 m6">
+                <div class="btn">
+                    <span><i class="material-icons">add_a_photo</i></span>
+                    <input type="file" (change)="file.emit($event)" accept=".jpg, .jpeg" required>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <div class="file-field input-field col s12 m6">
+                <div class="btn">
+                    <span><i class="material-icons">picture_as_pdf</i></span>
+                    <input type="file" (change)="doc.emit($event)" accept=".pdf">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit" [disabled]="!courseForm.form.valid || !fileVal">Crea</button>
+    </form>
+</div>

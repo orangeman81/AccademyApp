@@ -1,0 +1,18 @@
+<div class="row flex">
+    <div class="card-flex" *ngFor="let course of courseList">
+        <article class="card sticky-action h-product">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" [src]="'/uploads/' + course.fileName">
+            </div>
+            <div class="card-content"> <span class="card-title activator grey-text text-darken-4">{{course.title}}<i class="material-icons right">more_vert</i></span>
+                <p><a href="#" routerLink="/home/courses/{{course._id}}"><i class="material-icons">info</i>&ensp;Info</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                    <span class="p-name">{{course.title}}</span><i class="material-icons right">close</i><br><small>{{course.description}}</small>
+                </span>
+                <p class="e-description">{{course.goals | truncate: 350}}</p>
+            </div>
+        </article>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<section>
+    <h1 class="left">Dettagli</h1>
+    <button (click)="delete(courseDetails$?.fileName, courseDetails$?.docName)" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">delete</i></button>
+    <button routerLink="../../" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">list</i></button>
+    <button (click)="layout()" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">{{iconToggle}}</i></button>
+    <div class="clearfix"></div>
+</section>
+<app-details-course-view *ngIf="!formLayout" [courseDetails]="courseDetails$"></app-details-course-view>
+<section *ngIf="formLayout">
+    <app-details-course-form [fileVal]="upload.fileVal" [courseDetails]="courseDetails$" (detailsForm)="onSubmit($event, courseDetails$?.fileName, courseDetails$?.docName)" (file)="upload.getFile($event)" (doc)="upload.getDoc($event)">
+    </app-details-course-form>
+</section>

@@ -1,0 +1,14 @@
+<section>
+    <h1 class="left">Details</h1>
+    <button (click)="delete(newsDetails$?.fileName)" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">delete</i></button>
+    <button routerLink="../../" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">list</i></button>
+    <button (click)="layout()" class="btn-floating btn-dash waves-effect waves-light right"><i class="material-icons">{{iconToggle}}</i></button>
+    <div class="clearfix"></div>
+</section>
+<section *ngIf="!formLayout">
+    <app-details-view [newsDetailsView]="newsDetails$"></app-details-view>
+</section>
+<section *ngIf="formLayout">
+    <app-details-news-form [fileVal]="upload.fileVal" [newsDetails]="newsDetails$" (detailsForm)="onSubmit($event, newsDetails$?.fileName)" (file)="upload.getFile($event)">
+    </app-details-news-form>
+</section>

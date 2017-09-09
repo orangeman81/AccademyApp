@@ -1,0 +1,26 @@
+<div class="navbar-fixed">
+    <nav class="top-nav">
+        <div class="nav-wrapper">
+            <a href="#" materialize="sideNav" data-activates="dashboard-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+            <span href="#" class="page-title">Dashboard</span>
+            <ul class="side-nav fixed" id="dashboard-nav">
+                <li>
+                    <div class="userView">
+                        <div class="background">
+                            <img [src]="'assets/img/texture_shadow.jpg'">
+                        </div>
+                        <a href="/#!user"><img width="64x" [src]="'assets/img/logoaccademia.png'"></a>
+                        <a href="/#!name"><span class="white-text name">Accademia della moda</span></a>
+                        <a href="/#!email"><span class="white-text email">info@accademiadellamoda.it</span></a>
+                    </div>
+                </li>
+                <li> <a routerLink="/"><i class="material-icons">home</i>Home</a> </li>
+                <li> <a routerLink="/dashboard"><i class="material-icons">dashboard</i>Dashboard</a> </li>
+                <li> <a routerLink="courses"><i class="material-icons">local_library</i>Corsi</a> </li>
+                <li> <a routerLink="news"><i class="material-icons">today</i>News</a> </li>
+                <li> <a routerLink="info"><i class="material-icons">info</i>Info</a> </li>
+                <li> <a href="#" (click)="feathers.logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a> </li>
+            </ul>
+        </div>
+    </nav>
+</div>

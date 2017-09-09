@@ -1,0 +1,14 @@
+.fixed-action-btn.horizontal {
+    position: absolute;
+    top: -7.15rem;
+    right: -13.25%;
+    bottom: auto;
+    z-index: 2;
+    @media screen and (min-width: 1800px) {
+        right: -14.5%;
+    }
+}
+
+.parallax-container {
+    height: 320px;
+}

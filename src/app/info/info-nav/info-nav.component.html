@@ -1,0 +1,80 @@
+<nav class="top-nav">
+    <div class="nav-wrapper">
+        <a href="#" materialize="sideNav" data-activates="info-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+        <span class="page-title">{{info?.title}}</span>
+        <ul class="side-nav fixed" id="info-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img [src]="'assets/img/texture_shadow.jpg'">
+                    </div>
+                    <a href="#!user"><img width="64x" [src]="'assets/img/logoaccademia.png'"></a>
+                    <a href="#!name"><span class="white-text name">Accademia della moda</span></a>
+                    <a href="#!email"><span class="white-text email">info@accademiadellamoda.it</span></a>
+                </div>
+            </li>
+            <li> <a routerLink="/home"><i class="material-icons">home</i>Home</a> </li>
+            <li> <a routerLink="/information"><i class="material-icons">info</i>Info</a> </li>
+            <li>
+                <ul class="collapsible collapsible-accordion" materialize="collapsible">
+                    <li>
+                        <a class="collapsible-header waves-effect">L'accademia<i class="material-icons">account_balance</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a routerLink="/information/chi_siamo">chi siamo</a></li>
+                                <li><a routerLink="/information/accreditamento">accreditamento</a></li>
+                                <li><a routerLink="/information/docenti">docenti</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li> <a routerLink="/home/courses"><i class="material-icons">school</i>Corsi</a> </li>
+            <li>
+                <ul class="collapsible collapsible-accordion" materialize="collapsible">
+                    <li>
+                        <a class="collapsible-header waves-effect">Come Iscriversi<i class="material-icons">assignment</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a routerLink="/information/orientamento">Orientamento</a></li>
+                                <li><a routerLink="/information/iscrizione_per_gli_stranieri">Iscrizione per gli stranieri</a></li>
+                                <li><a routerLink="/information/borse_di_studio">Borse di studio</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="collapsible collapsible-accordion" materialize="collapsible">
+                    <li>
+                        <a class="collapsible-header waves-effect">International office<i class="material-icons">explore</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a routerLink="/information/erasmus_plus">Erasmus+</a></li>
+                                <li><a routerLink="/information/erasmus_statement">Erasmus statement</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="collapsible collapsible-accordion" materialize="collapsible">
+                    <li>
+                        <a class="collapsible-header waves-effect">Servizi per gli allievi<i class="material-icons">room_service</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a routerLink="/information/segreteria_studenti">Segreteria studenti</a></li>
+                                <li><a routerLink="/information/biblioteca">Biblioteca</a></li>
+                                <li><a routerLink="/information/orientamento_al_lavoro">Orientamento al lavoro</a></li>
+                                <li><a routerLink="/information/cv_studenti">Cv studenti</a></li>
+                                <li><a routerLink="/information/alloggi">Alloggi</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li> <a routerLink="/home/news"><i class="material-icons">today</i>News</a> </li>
+            <li><a href="/en"><i class="material-icons">language</i>en</a></li>
+        </ul>
+    </div>
+</nav>

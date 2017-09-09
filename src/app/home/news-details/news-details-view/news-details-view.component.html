@@ -1,0 +1,21 @@
+<header class="parallax-container">
+    <div *ngIf="news?.fileName" class="parallax" materialize="parallax">
+        <img [src]="'/uploads/' + news?.fileName">
+    </div>
+</header>
+<main id="details">
+    <div class="row">
+        <article class="col l12 h-entry">
+            <div class="card">
+                <div class="card-content">
+                    <header class="card-title">
+                        <h1 class="p-name">{{news?.title}}</h1>
+                        <time><i class="material-icons">access_time</i>&ensp;<span class="dt-published">{{news?.createdAt | date: "shortDate"}}</span></time>
+                    </header>
+                    <p class="e-content">{{news?.description}}</p>
+                </div>
+                <div class="card-action center-align"> <a routerLink="/home/news">Tutte le news</a></div>
+            </div>
+        </article>
+    </div>
+</main>

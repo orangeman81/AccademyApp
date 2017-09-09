@@ -1,0 +1,61 @@
+<header class="parallax-container">
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>Benvenuto in Accademia della moda | IUAD</p>
+    </div>
+    <div class="parallax" materialize="parallax">
+        <img [src]="'../assets/img/home.jpeg'">
+    </div>
+</header>
+<main class="container">
+    <div class="fixed-action-btn hide-on-large-only">
+        <a class="btn-floating btn-large red accent-4"> <i class="large material-icons">share</i> </a>
+        <ul>
+            <li><a target="_blank" href="https://www.facebook.com/pages/Accademia-della-Moda/120240367998911" class="btn-floating grey darken-2"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/AccademiadModa" class="btn-floating grey darken-2"><i class="fa fa-twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCcZHXLNvYQ6kCuuJA7dZjRQ" class="btn-floating grey darken-2"><i class="fa fa-youtube-play"></i></a></li>
+            <li><a target="_blank" href="http://siac.sogiscuola.com/modana/acca/modanaextra/areastudenti/index.php" class="btn-floating grey darken-2"><i class="fa fa-user"></i></a></li>
+            <li><a target="_blank" href="http://siac.sogiscuola.com/modana/acca/modanaextra/areadocenti/principale.php" class="btn-floating grey darken-2"><i class="fa fa-user-plus"></i></a></li>
+        </ul>
+    </div>
+    <div class="fixed-action-btn horizontal hide-on-med-and-down">
+        <a class="btn-floating btn-large red accent-4"> <i class="large material-icons">share</i> </a>
+        <ul>
+            <li><a target="_blank" href="https://www.facebook.com/pages/Accademia-della-Moda/120240367998911" class="btn-floating grey darken-2"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/AccademiadModa" class="btn-floating grey darken-2"><i class="fa fa-twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCcZHXLNvYQ6kCuuJA7dZjRQ" class="btn-floating grey darken-2"><i class="fa fa-youtube-play"></i></a></li>
+            <li><a target="_blank" href="http://siac.sogiscuola.com/modana/acca/modanaextra/areastudenti/index.php" class="btn-floating grey darken-2"><i class="fa fa-user"></i></a></li>
+            <li><a target="_blank" href="http://siac.sogiscuola.com/modana/acca/modanaextra/areadocenti/principale.php" class="btn-floating grey darken-2"><i class="fa fa-user-plus"></i></a></li>
+        </ul>
+    </div>
+    <section>
+        <header>
+            <h2>Corsi di laurea</h2>
+        </header>
+        <app-course-list [courseList]="gradList$ | async"></app-course-list>
+    </section>
+    <section>
+        <header>
+            <h2>Masters</h2>
+        </header>
+        <app-course-list [courseList]="mastersList$ | async"></app-course-list>
+    </section>
+    <section>
+        <header>
+            <h2>Corsi Milano</h2>
+        </header>
+        <app-course-list [courseList]="milanList$ | async"></app-course-list>
+    </section>
+    <section>
+        <header>
+            <h2>Corsi Brevi</h2>
+        </header>
+        <app-course-list [courseList]="profsList$ | async"></app-course-list>
+    </section>
+    <section>
+        <header>
+            <h2>News</h2>
+        </header>
+        <app-news-list [newsList]="newsList$ | async"></app-news-list>
+    </section>
+</main>

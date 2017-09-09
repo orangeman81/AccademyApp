@@ -1,0 +1,87 @@
+<div class="row">
+    <form class="col s12" materialize #updateCourseForm="ngForm" (ngSubmit)="detailsForm.emit(updateCourseForm.value); updateCourseForm.reset()">
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder id="title" type="text" name="title" class="validate" ngModel="{{courseDetails?.title}}" required>
+                <label for="title">Nome Corso</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="description" type="text" name="description" class="validate" ngModel="{{courseDetails?.description}}" required>
+                <label for="description">Descrizione</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="requirements" type="text" name="requirements" class="validate" ngModel="{{courseDetails?.requirements}}" required>
+                <label for="requirements">Requisiti</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="access" type="text" name="access" class="validate" ngModel="{{courseDetails?.access}}" required>
+                <label for="access">Accesso</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input placeholder id="certificate" type="text" name="certificate" class="validate" ngModel="{{courseDetails?.certificate}}" required>
+                <label for="certificate">Titolo rilasciato</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="goals" name="goals" class="materialize-textarea" ngModel="{{courseDetails?.goals}}" required></textarea>
+                <label for="goals">Obiettivi</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="job" name="job" class="materialize-textarea" ngModel="{{courseDetails?.job}}" required></textarea>
+                <label for="job">Sbocchi Occupazionali</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="program" name="program" class="materialize-textarea" ngModel="{{courseDetails?.program}}" required></textarea>
+                <label for="program">Attività formative I anno</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="programII" name="programII" class="materialize-textarea" ngModel="{{courseDetails?.programII}}"></textarea>
+                <label for="programII">Attività formative II anno</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea placeholder id="programIII" name="programIII" class="materialize-textarea" ngModel="{{courseDetails?.programIII}}"></textarea>
+                <label for="programIII">Attività formative III anno</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <select materialize="material_select" name="tag" ngModel="{{courseDetails?.tag}}" required>
+                      <option value="" disabled selected>Scegli un'area</option>
+                      <option value="fashion">Moda</option>
+                      <option value="graphic">Graphic Design</option>
+                      <option value="interior">Interior Design</option>
+                    </select>
+                <label>Area di studi</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <select materialize="material_select" name="type" ngModel="{{courseDetails?.type}}" required>
+                      <option value="" disabled selected>Scegli una tipologia</option>
+                      <option value="graduation">Laurea</option>
+                      <option value="master">Master</option>
+                      <option value="professional">Professionale</option>
+                    </select>
+                <label>Tipologia</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="file-field input-field col s12 m6">
+                <div class="btn">
+                    <span><i class="material-icons">add_a_photo</i></span>
+                    <input type="file" (change)="file.emit($event)" accept=".jpg, .jpeg" required>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <div class="file-field input-field col s12 m6">
+                <div class="btn">
+                    <span><i class="material-icons">picture_as_pdf</i></span>
+                    <input type="file" (change)="doc.emit($event)" accept=".pdf">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit" [disabled]="!updateCourseForm.form.valid || !fileVal">Aggiorna</button>
+    </form>
+</div>

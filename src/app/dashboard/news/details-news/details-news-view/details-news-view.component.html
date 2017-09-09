@@ -1,0 +1,3 @@
+<h2>{{newsDetailsView?.title}}</h2>
+<img *ngIf="newsDetailsView?.fileName" [src]="'uploads/' + newsDetailsView?.fileName" alt="">
+<p>{{newsDetailsView?.description}}</p>

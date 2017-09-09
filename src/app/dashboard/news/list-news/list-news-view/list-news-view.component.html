@@ -1,0 +1,11 @@
+<ul class="collapsible" materialize="collapsible" data-collapsible="accordion">
+    <li *ngFor="let news of newsList">
+        <div class="collapsible-header">
+            <p>{{news.title}}</p>
+        </div>
+        <div class="collapsible-body">
+            <p><time><i class="material-icons">access_time</i>&ensp;{{news.createdAt | date:'shortDate'}}</time><br>{{news.description | truncate : 100}}</p>
+            <a href="" routerLink="details/{{news._id}}"><i class="material-icons">info</i>&ensp;Dettagli</a>
+        </div>
+    </li>
+</ul>

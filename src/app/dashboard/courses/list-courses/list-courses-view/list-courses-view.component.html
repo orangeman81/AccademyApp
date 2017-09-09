@@ -1,0 +1,11 @@
+<ul class="collapsible" materialize="collapsible" data-collapsible="accordion">
+    <li *ngFor="let course of coursesList">
+        <div class="collapsible-header">
+            <p>{{course.title}}</p>
+        </div>
+        <div class="collapsible-body">
+            <p> {{course.goals | truncate : 100}}</p>
+            <a href="" routerLink="details/{{course._id}}"><i class="material-icons">info</i>&ensp;Dettagli</a>
+        </div>
+    </li>
+</ul>
