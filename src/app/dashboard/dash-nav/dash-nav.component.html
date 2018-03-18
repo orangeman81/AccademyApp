@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
     <nav class="top-nav">
         <div class="nav-wrapper">
-            <a href="#" materialize="sideNav" data-activates="dashboard-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" materialize="sideNav" [materializeParams]="[{closeOnClick:true}]" data-activates="dashboard-nav" class="button-collapse"><i class="material-icons">menu</i></a>
             <span href="#" class="page-title">Dashboard</span>
             <ul class="side-nav fixed" id="dashboard-nav">
                 <li>

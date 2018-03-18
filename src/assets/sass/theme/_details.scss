@@ -53,6 +53,7 @@ main#details {
             }
         }
         @media screen and (max-width: $small-screen) {
+            background: #fff;
             box-shadow: none;
             header {
                 margin-bottom: 3.333rem;

@@ -1,6 +1,6 @@
 <nav class="top-nav">
     <div class="nav-wrapper">
-        <a href="#" materialize="sideNav" data-activates="info-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" materialize="sideNav" [materializeParams]="[{closeOnClick:true}]" data-activates="info-nav" class="button-collapse"><i class="material-icons">menu</i></a>
         <span class="page-title">{{info?.title}}</span>
         <ul class="side-nav fixed" id="info-nav">
             <li>
